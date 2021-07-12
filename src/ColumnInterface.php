@@ -14,8 +14,6 @@ interface ColumnInterface extends JsonSerializable
 
     public function getTitle(): ?string;
 
-    public function getIndex(): int;
-
     public function isSearchable(): bool;
 
     public function isOrderable(): bool;

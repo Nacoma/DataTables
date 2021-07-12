@@ -7,11 +7,10 @@ namespace Nacoma\DataTables\Columns;
 use Nacoma\DataTables\ColumnInterface;
 use Nacoma\DataTables\RendererInterface;
 
-class Text implements ColumnInterface
+class Column implements ColumnInterface
 {
     public function __construct(
         private string $name,
-        private int $index,
         private RendererInterface $renderer,
         private ?string $title = null,
         private ?string $data = null,
@@ -27,11 +26,6 @@ class Text implements ColumnInterface
     public function getData(): ?string
     {
         return $this->data;
-    }
-
-    public function getIndex(): int
-    {
-        return $this->index;
     }
 
     public function isSearchable(): bool
